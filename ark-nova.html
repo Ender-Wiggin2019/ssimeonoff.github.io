@@ -29,7 +29,7 @@
       <div id="buttonsContainer">
       <div id="buttonsContainer-header">
         <div id="titleContainer">
-          <div class="title-style">ARK NOVA CARDS LIST</div>
+          <div class="title-style">方舟动物园卡表</div>
         </div>
         <a disabled id="btn-selectedCards" class="button btn-selected-cards disabled" title="open selected cards" href="no-selected-card.html" target="_blank">SELECTED
           <div id="selectedCardsAmount">0</div>
@@ -39,10 +39,10 @@
 
   <div id="buttonsContainer-body">
     <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
-      <button id="animal" class="button btn1 background-color-animals  " onclick="filterFunction(id)" title="filter Animals cards">ANIMALS</button>
-      <button id="sponsor" class="button btn1 background-color-sponsors  " onclick="filterFunction(id)" title="filter Sponsor Cards">SPONSORS</button>
-      <button id="project" class="button btn1 background-color-projects  " onclick="filterFunction(id)" title="filter Conservation Projects Cards">PROJECTS</button>
-      <button id="endgame" class="button btn1 background-color-endgame  " onclick="filterFunction(id)" title="filter Endgame Scoring Cards">ENDGAME</button>
+      <button id="animal" class="button btn1 background-color-animals  " onclick="filterFunction(id)" title="filter Animals cards">动物</button>
+      <button id="sponsor" class="button btn1 background-color-sponsors  " onclick="filterFunction(id)" title="filter Sponsor Cards">赞助商</button>
+      <button id="project" class="button btn1 background-color-projects  " onclick="filterFunction(id)" title="filter Conservation Projects Cards">保护项目</button>
+      <button id="endgame" class="button btn1 background-color-endgame  " onclick="filterFunction(id)" title="filter Endgame Scoring Cards">终局计分</button>
     </div>
 
     <div id="myBtnContainer2" style="line-height:55px;">
@@ -62,7 +62,7 @@
       <button id="science" class="button btn2 icon-science" onclick="filterFunction(id)" title="filter by Science icon"></button>
     </div>
     <div>
-      <input type="text" id="myInput" oninput="filterFunction(id);" placeholder="Search by text ..." title="Search by card's title, number or keywords">
+      <input type="text" id="myInput" oninput="filterFunction(id);" placeholder="根据文本搜索 ..." title="Search by card's title, number or keywords">
 
       <button id="rock" class="button btn4 icon-rock" onclick="filterFunction(id)" title="filter by Rock icon"></button>
       <button id="water" style="margin-right:50px;"  class="button btn4 icon-water" onclick="filterFunction(id)" title="filter by Water icon"></button>
@@ -142,18 +142,18 @@
     </div>
   </div>
     <div id="buttonsContainer-footer">
-      <button id="reset" class="button2 btn-reset" onclick="clearInput();showAll();" title="Reset all selected filters">RESET</button>
+      <button id="reset" class="button2 btn-reset" onclick="clearInput();showAll();" title="Reset all selected filters">重置</button>
 
-      <div class="card-footer" style="margin-left:0px"><div class="card-footer-projects">ANIMALS</div></div>
+      <div class="card-footer" style="margin-left:0px"><div class="card-footer-projects">动物</div></div>
       <div id="totalProjects" class="totalCardsCount odometer" data-minintegerlen="3"></div>
 
-      <div class="card-footer"><div class="card-footer-corp">SPONSORS</div></div>
+      <div class="card-footer"><div class="card-footer-corp">赞助商</div></div>
       <div id="totalCorporations" class="totalCardsCount odometer"></div>
 
-      <div class="card-footer" ><div class="card-footer-prelude">PROJECTS</div></div>
+      <div class="card-footer" ><div class="card-footer-prelude">保护项目</div></div>
       <div id="totalPreludes" class="totalCardsCount odometer"></div>
 
-      <div class="card-footer" ><div class=" card-footer-colony">ENDGAME</div></div>
+      <div class="card-footer" ><div class=" card-footer-colony">终局计分</div></div>
       <div id="totalColonies" class="totalCardsCount odometer"></div>
 
     </div>
@@ -1588,8 +1588,8 @@
 
   </ul>
 
-  <button id="button-load-more" class="button button2 btn-load-more" onClick="displayCards()">LOAD MORE</button>
-
+  <button id="button-load-more" class="button button2 btn-load-more" onClick="displayCards()">加载更多</button>
+  <div  style="text-align:center;margin:-5px 0 0;color:white;position: relative;">特别声明：本网站直接从外网搬运汉化，源码见<a href="https://github.com/ssimeonoff/ssimeonoff.github.io" target="_blank"><font color="white">ssimeonoff.github.io</font></a></div>
   </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
