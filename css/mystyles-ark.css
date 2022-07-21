@@ -494,34 +494,84 @@ a {
 .background-color-animals {background: linear-gradient(to right,#f29806, #fdbf1c,#fdbf1c,#f29806);color:black !important}
 
 /*********** Style the tags ************/
-.icon-africa {background-position: -494px -14px !important;}
-.icon-america {background-position: -734px -14px !important;}
-.icon-australia {background-position: -974px -14px !important;}
-.icon-asia {background-position: -1214px -14px !important;}
-.icon-europe {background-position: -14px -349px !important;}
-.icon-ape {background-position: -254px -349px !important;}
-.icon-lizard {background-position: -494px -349px !important;}
-.icon-predator {background-position: -734px -349px !important;}
-.icon-herbivore {background-position: -974px -349px !important;}
-.icon-bird {background-position: -1214px -349px !important;}
-.icon-pet {background-position: -1214px -349px !important;}
-.icon-bear {background-position: -1214px -349px !important;}
+.icon-africa {background-image: url("../images-ark/africa.png") !important;
+  background-position: -2px -2px !important;
+  background-size: 40px !important;}
+.icon-america {background-image: url("../images-ark/americas.png") !important;
+  background-position: -2px -2px !important;
+  background-size: 40px !important;}
+.icon-australia {background-image: url("../images-ark/australia.png") !important;
+  background-position: -2px -2px !important;
+  background-size: 40px !important;}
+.icon-asia {background-image: url("../images-ark/asia.png") !important;
+  background-position: -2px -2px !important;
+  background-size: 40px !important;}
+.icon-europe {background-image: url("../images-ark/europe.png") !important;
+  background-position: -2px -2px !important;
+  background-size: 40px !important;}
+.icon-ape {background-image: url("../images-ark/primate.png") !important;
+  background-position: -2px -2px !important;
+  background-size: 40px !important;}
+.icon-lizard {background-image: url("../images-ark/reptile.png") !important;
+  background-position: -2px -2px !important;
+  background-size: 40px !important;}
+.icon-predator {background-image: url("../images-ark/predator.png") !important;
+  background-position: -2px -2px !important;
+  background-size: 40px !important;}
+.icon-herbivore {background-image: url("../images-ark/herbivore.png") !important;
+  background-position: -2px -2px !important;
+  background-size: 40px !important;}
+.icon-bird {background-image: url("../images-ark/bird.png") !important;
+  background-position: -2px -2px !important;
+  background-size: 40px !important;}
 .icon-pet {background-image: url("../images-ark/pet.png") !important;
-  background-position: 0px 0px !important;
+  background-position: -2px -2px !important;
   background-size: 40px !important;}
 .icon-bear {background-image: url("../images-ark/bear.png") !important;
-  background-position: 0px 0px !important;
+  background-position: -2px -2px !important;
   background-size: 40px !important;}
-.icon-science {background-image: url("../images-ark/science.png") !important; background-position: -5px -5px !important;}
-.icon-size1 {background-position-y: -677px; background-position-x: -966px;}
-.icon-size2 {background-position-y: -677px; background-position-x: -726px;}
-.icon-size3 {background-position-y: -677px; background-position-x: -486px;}
-.icon-size4 {background-position-y: -342px; background-position-x: -1446px;}
-.icon-size5 {background-position-y: -342px; background-position-x: -1206px;}
-.icon-water {background-position-x: -993px; background-position-y: -1683px;}
-.icon-rock {background-position-x: -753px; background-position-y: -1683px;}
+.icon-science {background-image: url("../images-ark/research.png") !important;
+  background-position: -2px -2px !important;
+  background-size: 40px !important;}
+/* .icon-science {background-image: url("../images-ark/science.png") !important; background-position: -5px -5px !important;} */
+.icon-size1 {background-image: url("../images-ark/size1.png") !important;
+  font-family: Prototype;
+  font-size: 10px;
+  text-align: center;
+  background-position: 0px 0px !important;
+  background-size: 38px !important;}
+.icon-size2 {background-image: url("../images-ark/size2.png") !important;
+  font-family: Prototype;
+  font-size: 10px;
+  text-align: center;
+  background-position: 0px 0px !important;
+  background-size: 38px !important;}
+.icon-size3 {background-image: url("../images-ark/size3.png") !important;
+  font-family: Prototype;
+  font-size: 10px;
+  text-align: center;
+  background-position: 0px 0px !important;
+  background-size: 38px !important;}
+.icon-size4 {background-image: url("../images-ark/size4.png") !important;
+  font-family: Prototype;
+  font-size: 10px;
+  text-align: center;
+  background-position: 0px 0px !important;
+  background-size: 38px !important;}
+.icon-size5 {background-image: url("../images-ark/size5.png") !important;
+  font-family: Prototype;
+  font-size: 10px;
+  text-align: center;
+  background-position: 0px 0px !important;
+  background-size: 38px !important;}
+.icon-water {background-image: url("../images-ark/water.png") !important;
+  background-position: 0px -3px !important;
+  background-size: 42px !important;}
+.icon-rock {background-image: url("../images-ark/rock.png") !important;
+  background-position: 0px -3px !important;
+  background-size: 42px !important;}
 /************** Style the buttons ************/
-.button, .button2 {
+/* .button, .button2 {
   outline: none;
   box-shadow: 0 0px 2px 1px rgba(0,0,0,.5);
   background-color: #ccc;
@@ -532,7 +582,31 @@ a {
   box-shadow: none;
   opacity: 0.5;
   transform: scale(0.9);
+} */
+.button, .button2 {
+  outline: none;
+  box-shadow: 0 0px 2px 1px rgba(0,0,0,.5);
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  font-family: Prototype;
+  background-color: #ccc;
 }
+
+.button.active {
+  border: 2px solid white !important;
+  box-shadow: 0px 0px 10px #ffd469;
+  /* opacity: 0.5; */
+  filter: drop-shadow(0 0 3px #ffd469);
+  /* transform: scale(1.1); */
+}
+
+.button2:active {
+  transform: translate(0,1px);
+}
+
+
 
 .button:hover, .button2:hover, .btn-sort:hover {
   filter: brightness(120%);
@@ -547,6 +621,8 @@ a {
 .disabled:hover {
   filter: none !important;
 }
+
+
 
 .btn1 {
     outline: none;
@@ -563,7 +639,7 @@ a {
     letter-spacing: 1px;
 }
 
-.btn2 {
+/* .btn2 {
   background:url("../images-ark/cards2.jpg");
   outline: none;
   height: 40px;
@@ -574,6 +650,20 @@ a {
   font-weight: normal;
   margin-right: 10px;
   transform: scale(1.2);
+} */
+
+
+.btn2 {
+  outline: none;
+  height: 40;
+  width: 40;
+  background-size: 45;
+  background-position: -5px;
+  cursor: pointer;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: normal;
+  margin-right: 10px;
 }
 
 .btn3 {
@@ -605,7 +695,6 @@ a {
   cursor: pointer;
   text-align: center;
   font-weight: normal;
-  margin-right: -3px;
   background-image: url(../images-ark/cards4.jpg);
 }
 
