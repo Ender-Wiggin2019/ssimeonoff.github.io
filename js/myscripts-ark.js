@@ -9,11 +9,15 @@ var selectedCardsAmount = 0;
 //parse the url
 urlString = window.location.href;
 cards = parseURLParams(urlString);
+console.log(urlString)
 
 //display all card or only few ones if pointed
 if (cards == "ALL") {showAll();}
+else if (cards == "MAP-ALL") {showMapAll();}
 else {
   displayCardsOnly(cards);
+  displayMapsOnly(cards);
+
   zoomSingleCard();}
 
 function showAll() {
@@ -47,6 +51,33 @@ function showAll() {
   displayCards();
 }
 
+function showMapAll() {
+  var x, i;
+  displayedAnimals = 128;
+  displayedSponsors = 64;
+  displayedProjects = 32;
+  displayedEndgames = 11;
+
+  document.getElementById("buttonsContainer").style.display = "block";
+
+  var elements = document.querySelectorAll('.ul-title');
+  for (i=0; i<elements.length; i++){elements[i].style.display = "block";}
+
+  //making all buttons inactive
+  y = document.querySelectorAll('button.active');
+  if (y.length > 0) {
+      for (i = 0; i < y.length; i++) {
+          y[i].classList.toggle("active");
+      }
+  }
+  //showing all cards
+  x = document.querySelectorAll('.filterDiv-map');
+  for (i = 0; i < x.length; i++) {w3AddClass(x[i], "show");}
+
+  //displaying first 48 cards that have "show"
+  displayCards();
+}
+
 function displayCards() {
   button_load_more = document.getElementById("button-load-more");
 
@@ -66,12 +97,32 @@ function displayCards() {
   }
 }
 
+function displayMaps() {
+  button_load_more = document.getElementById("button-load-more");
+
+  arr = document.querySelectorAll('li.show');
+  if (arr.length > 48) {
+    display_length = 48
+    button_load_more.style.display = "block"
+  }
+  else {
+    display_length = arr.length
+    button_load_more.style.display = "none"
+  }
+
+  for (i=0; i < display_length; i++) {
+    w3AddClass(arr[i], "display");
+    w3RemoveClass(arr[i], "show");
+  }
+  
+}
 //////////////////////PARSE function ////////////////////////////////
 function parseURLParams(url) {
     var queryStart = url.indexOf("#") + 1,
         queryEnd   = url.indexOf("%") + 1 || url.length + 1,
         query = url.slice(queryStart, queryEnd - 1)
     cards = "#" + query.replace(/\#/g, " #").toUpperCase().split(" ");
+    console.log('q', query)
     if (query === url || query === "") return "ALL";
     return cards;
 }
@@ -96,7 +147,58 @@ function displayCardsOnly() {
   }
 }
 
+function displayMapsOnly() {
+
+  //showing only the pointed cards
+  x = document.querySelectorAll('li.filterDiv-map');
+  for (i = 0; i < x.length; i++) {
+    if (x[i].querySelector(".number") != null) {
+      if (cards.includes(x[i].querySelector(".number").textContent)) {
+        w3AddClass(x[i], "display");
+      }
+    }
+    else {
+      if (cards.includes(x[i].id)) {
+        w3AddClass(x[i], "display");
+      }
+    }
+
+  }
+}
 ////////////////////// FILTER FUCTION ///////////////////////////////
+function selectMap(id) {
+  var input, filter, ul, li, a, i, x;
+
+  clickedElementID = document.getElementById(id);
+  if (clickedElementID != null) {clickedElementID.classList.toggle("active");}
+
+  x = document.querySelectorAll('.filterDiv-map');
+  for (i = 0; i < x.length; i++) {w3AddClass(x[i], "show");}
+  btnType = document.querySelectorAll('button.active.btn1');
+  if (btnType.length > 0) {
+    for (i = 0; i < x.length; i++) {
+      show = false;
+      for (j = 0; j < btnType.length; j++) {
+        if (x[i].className.indexOf(btnType[j].id) > -1) {
+          show = true;
+        }
+        if (show == true) {w3AddClass(x[i], "show");}
+        else {w3RemoveClass(x[i], "show"); }
+        }
+    }
+    //Display Cards Numbers
+    displayedCards = document.querySelectorAll('li.show');
+
+    console.log(displayedCards);
+
+
+  //clearing all displayed cards
+  y = document.querySelectorAll('.display');
+  for (i = 0; i < y.length; i++) {w3RemoveClass(y[i], "display");}
+  //displaying the first N cards that have class "show"
+    displayCards();
+  }
+}
 function filterFunction(id) {
   var input, filter, ul, li, a, i, x;
 
@@ -145,6 +247,7 @@ function filterFunction(id) {
         if (show == true) {w3AddClass(x[i], "show");}
         else {w3RemoveClass(x[i], "show"); }
         }
+        // console.log(x[i].className);
     }
     x = document.querySelectorAll('li.show');
   }

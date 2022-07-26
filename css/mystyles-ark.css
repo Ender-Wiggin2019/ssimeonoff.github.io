@@ -55,6 +55,16 @@ a {
 .r6 {background-position-y: -1676px}
 .r7 {background-position-y: -2011px}
 
+.map2 {background-image: url("../images-ark/plan2.jpg"); background-size: 485px;}
+.map3 {background-image: url("../images-ark/plan3.jpg"); background-size: 485px;}
+.map1 {background-image: url("../images-ark/plan1.jpg"); background-size: 485px;}
+.map4 {background-image: url("../images-ark/plan4.jpg"); background-size: 485px;}
+.map5 {background-image: url("../images-ark/plan5.jpg"); background-size: 485px;}
+.map6 {background-image: url("../images-ark/plan6.jpg"); background-size: 485px;}
+.map7 {background-image: url("../images-ark/plan7.jpg"); background-size: 485px;}
+.map8 {background-image: url("../images-ark/plan8.jpg"); background-size: 485px;}
+.map0 {background-image: url("../images-ark/plan0.jpg"); background-size: 485px;}
+.mapA {background-image: url("../images-ark/planA.jpg"); background-size: 485px;}
 
 /*project card div*/
 .filterDiv {
@@ -73,6 +83,25 @@ a {
     transition: transform 200ms ease-in-out;
     will-change: transform;
     color: transparent;
+}
+
+.filterDiv-map {
+  cursor: pointer;
+  float: left;
+  position: relative;
+  width: 485px;
+  height: 250px;
+  border-radius: 2px;
+  display: none;
+  font-family:  Prototype;
+  font-size: 18px;
+  margin: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 7px 1px black;
+  transition: transform 200ms ease-in-out;
+  
+  will-change: transform;
+  color: transparent;
 }
 
 .clicked-card {
@@ -398,6 +427,8 @@ a {
 }
 
 
+
+
 .title {
   position: relative;
   text-transform: uppercase;
@@ -493,6 +524,10 @@ a {
 
 .background-color-animals {background: linear-gradient(to right,#f29806, #fdbf1c,#fdbf1c,#f29806);color:black !important}
 
+.background-color-map {background: linear-gradient(to right,#8cc4dd, #8cc4dd,#8cc4dd,#8cc4dd);}
+
+.background-color-beginner-map {background: linear-gradient(to right,#dd966f, #dd966f,#dd966f,#dd966f);}
+
 /*********** Style the tags ************/
 .icon-africa {background-image: url("../images-ark/africa.png") !important;
   background-position: -2px -2px !important;
@@ -583,6 +618,23 @@ a {
   opacity: 0.5;
   transform: scale(0.9);
 } */
+
+input[type='radio'][name='buttonGroup'] { display:none; }
+label {
+  outline: none;
+  box-shadow: 0 0px 2px 1px rgba(0,0,0,.5);
+  border-top: 2px solid rgb(221,221,221);
+  border-left: 2px solid rgb(221,221,221);
+  border-bottom: 2px solid rgb(137,137,137);
+  border-right: 2px solid rgb(137,137,137);
+  font-family: Prototype;
+  background-color: #8cc4dd;
+}
+
+/* Clicking a label will select its corresponding hidden radio button
+   We can select that radio buttons sibling label and style it. */
+input[type='radio'][name='buttonGroup']:checked + label { background-color:#a0a0a0; }
+
 .button, .button2 {
   outline: none;
   box-shadow: 0 0px 2px 1px rgba(0,0,0,.5);
@@ -696,6 +748,21 @@ a {
   text-align: center;
   font-weight: normal;
   background-image: url(../images-ark/cards4.jpg);
+}
+
+.btn-map {
+  outline: none;
+  font-family: Arial;
+  color: rgb(255, 255, 255);
+  height: 60px;
+  width: 177px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 0px;
+  margin-right: 8px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  letter-spacing: 1px;
 }
 
 .btn-reset {
