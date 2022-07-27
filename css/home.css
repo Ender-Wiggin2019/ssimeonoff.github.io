@@ -39,22 +39,22 @@
 .planet0 {
   border:none !important;
   box-shadow: none !important;
-  height: 70px !important;
-  color: #daab63 !important;
+  height: 150px !important;
+  color: #5f9f5a !important;
 }
 
 .title-top {
-  transform:scale(2,1);
-  margin-left: 70px;
-  font-size:12px;
-  width: 200px;
+  margin-left: 50px;
+  font-size:30px;
+  width: 300px;
   line-height: 30px;
   letter-spacing: 1px;
 }
 
 .title-bottom {
-  font-size:30px;
-  margin-left:30px;
+  font-size:50px;
+  margin-left:0px;
+  margin-bottom:60px;
 }
 
 .planet1 {
