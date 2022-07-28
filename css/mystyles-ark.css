@@ -24,9 +24,10 @@ a {
   padding-top: 20px;
   margin:auto;
   background-repeat: no-repeat;
-  background: linear-gradient(to top, #000, transparent 20%), 
-    linear-gradient(to left top, #000, transparent 20%), 
-    linear-gradient(to right top, #000, transparent 20%), 
+  background:
+    /*linear-gradient(to top, #000, transparent 20%), */
+    /*linear-gradient(to left top, #000, transparent 20%), */
+    /*linear-gradient(to right top, #000, transparent 20%), */
     url("../images-ark/savannah.jpg");
     background-size: 1750px;
 }
@@ -55,16 +56,16 @@ a {
 .r6 {background-position-y: -1676px}
 .r7 {background-position-y: -2011px}
 
-.map2 {background-image: url("../images-ark/plan2.jpg"); background-size: 485px;}
-.map3 {background-image: url("../images-ark/plan3.jpg"); background-size: 485px;}
-.map1 {background-image: url("../images-ark/plan1.jpg"); background-size: 485px;}
-.map4 {background-image: url("../images-ark/plan4.jpg"); background-size: 485px;}
-.map5 {background-image: url("../images-ark/plan5.jpg"); background-size: 485px;}
-.map6 {background-image: url("../images-ark/plan6.jpg"); background-size: 485px;}
-.map7 {background-image: url("../images-ark/plan7.jpg"); background-size: 485px;}
-.map8 {background-image: url("../images-ark/plan8.jpg"); background-size: 485px;}
-.map0 {background-image: url("../images-ark/plan0.jpg"); background-size: 485px;}
-.mapA {background-image: url("../images-ark/planA.jpg"); background-size: 485px;}
+.map1 {background-image: url("../images-ark/compress/plan1.jpg"); background-size: 485px;}
+.map2 {background-image: url("../images-ark/compress/plan2.jpg"); background-size: 485px;}
+.map3 {background-image: url("../images-ark/compress/plan3.jpg"); background-size: 485px;}
+.map4 {background-image: url("../images-ark/compress/plan4.jpg"); background-size: 485px;}
+.map5 {background-image: url("../images-ark/compress/plan5.jpg"); background-size: 485px;}
+.map6 {background-image: url("../images-ark/compress/plan6.jpg"); background-size: 485px;}
+.map7 {background-image: url("../images-ark/compress/plan7.jpg"); background-size: 485px;}
+.map8 {background-image: url("../images-ark/compress/plan8.jpg"); background-size: 485px;}
+.map0 {background-image: url("../images-ark/compress/plan0.jpg"); background-size: 485px;}
+.mapA {background-image: url("../images-ark/compress/planA.jpg"); background-size: 485px;}
 
 /*project card div*/
 .filterDiv {
@@ -100,7 +101,7 @@ a {
   margin-bottom: 10px;
   box-shadow: 0 0 7px 1px black;
   transition: transform 200ms ease-in-out;
-  
+
   will-change: transform;
   color: transparent;
 }
@@ -402,7 +403,7 @@ a {
 
  .corporate-icon2 {
   background-image: url("../images/expansions/corporate.png");
- }      
+ }
 .project-icon:after {
   margin-left: -231px;
   margin-top: 284px;
@@ -1493,7 +1494,7 @@ input[type='radio'][name='buttonGroup']:checked + label { background-color:#a0a0
 }
 .pristar {
   background-image: url(../images/resources/pristar.png);
-} 
+}
 
 .card {
   background: url("../images/resources/card.png");
@@ -1531,7 +1532,7 @@ input[type='radio'][name='buttonGroup']:checked + label { background-color:#a0a0
   background-position: 3px 0px;
   height: 26px;
   vertical-align: middle;
-}    
+}
 
 .card-icon-venus {
   background: rgb(84,150,201);
