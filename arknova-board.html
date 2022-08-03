@@ -24,7 +24,7 @@
   (function() {
     var hm = document.createElement("script");
     hm.src = "https://hm.baidu.com/hm.js?854bdf16e4e9c2242de5b5871f532196";
-    var s = document.getElementsByTagName("script")[0]; 
+    var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
   })();
   </script>
@@ -62,6 +62,9 @@
       <button id="plan6" class="button btn1 background-color-map  " onclick="selectMap(id)" title="filter Animals cards">地图6 研究院</button>
       <button id="plan7" class="button btn1 background-color-map  " onclick="selectMap(id)" title="filter Animals cards">地图7 冰淇淋店</button>
       <button id="plan8" class="button btn1 background-color-map  " onclick="selectMap(id)" title="filter Animals cards">地图8 好莱坞山</button>
+      <button id="plan9" class="button btn1 background-color-map  " onclick="selectMap(id)" title="filter Animals cards">地图9</button>
+      <button id="plan10" class="button btn1 background-color-map  " onclick="selectMap(id)" title="filter Animals cards">地图10</button>
+
       <button id="plan0" class="button btn1 background-color-beginner-map  " onclick="selectMap(id)" title="filter Animals cards">地图0 新手图</button>
       <button id="planA" class="button btn1 background-color-beginner-map  " onclick="selectMap(id)" title="filter Animals cards">地图A 新手图</button>
     </div>
@@ -137,7 +140,7 @@
 
   </div>
 
-  
+
   <!--ANIMALS-->
   <ul class="myUL" style="clear:both;">
 
@@ -173,7 +176,15 @@
         class="map8 filterDiv-map plan8">
 
       </li>
-      <li onclick="getClickedCard();"
+    <li onclick="getClickedCard();"
+        class="map9 filterDiv-map plan9">
+
+    </li>
+    <li onclick="getClickedCard();"
+        class="map10 filterDiv-map plan10">
+
+    </li>
+      <li onclick="getClickedCard(); name="111"
         class="map0 filterDiv-map plan0">
       </li>
       <li onclick="getClickedCard();"
@@ -184,7 +195,7 @@
   </ul>
 
   <button id="button-load-more" class="button button2 btn-load-more" onClick="displayCards()">加载更多</button>
-  
+
   </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
