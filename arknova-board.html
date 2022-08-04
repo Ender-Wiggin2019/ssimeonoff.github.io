@@ -35,7 +35,21 @@
   gtag('config', 'UA-116626580-1');
 </script>
 </head>
+<script type="text/javascript">
+  function setMap(i) {
+    let mysrc =
+            ["../images-ark/compress/plan1.jpg","../images-ark/compress/plan2.jpg","../images-ark/compress/plan3.jpg","../images-ark/compress/plan4.jpg","../images-ark/compress/plan5.jpg","../images-ark/compress/plan6.jpg","../images-ark/compress/plan7.jpg","../images-ark/compress/plan8.jpg","../images-ark/compress/plan9.jpg","../images-ark/compress/plan10.jpg","../images-ark/compress/plan0.jpg","../images-ark/compress/planA.jpg"];
+    let mapTitle =
+          ["观测塔","户外营地","银湖","商业港口","主题餐厅","研究院","冰淇淋店","好莱坞山","地图9（待翻译）","地图10（待翻译）"];
+    let mapText =
+          ["饲养区必须与观测塔的六角格相邻，而不仅仅是与另外3个岩石格相邻。","","","","","","","","左侧图示效果：移除一个大洲玩家标记，并选择下方奖励中的一个。","","","",""];
+    document.getElementById("map-board").src = mysrc[i];
+      console.log(document.getElementById("map-board"))
+      document.getElementById("map-title").textContent = mapTitle[i];
+      document.getElementById("map-text").textContent = mapText[i];
 
+  }
+</script>
 <html>
 <body>
   <div class="app-container">
@@ -53,94 +67,38 @@
 
   <div id="buttonsContainer-body">
     <div id="myBtnContainer1" style="line-height:55px;margin-bottom:10px;">
-      <button id="plan1" class="button btn1 background-color-map  " onclick="selectMap(id)" title="filter Animals cards">地图1 观测塔</button>
-      <button id="plan2" class="button btn1 background-color-map  " onclick="selectMap(id)" title="filter Animals cards">地图2 户外营地</button>
-      <button id="plan3" class="button btn1 background-color-map  " onclick="selectMap(id)" title="filter Animals cards">地图3 银湖</button>
-      <button id="plan4" class="button btn1 background-color-map  " onclick="selectMap(id)" title="filter Animals cards">地图4 商业港口</button>
-      <button id="plan5" class="button btn1 background-color-map  " onclick="selectMap(id)" title="filter Animals cards">地图5 主题餐厅</button>
+      <button id="plan1" class="button btn1 background-color-map  " onclick="setMap(0)" title="filter Animals cards">地图1 观测塔</button>
+      <button id="plan2" class="button btn1 background-color-map  " onclick="setMap(1)" title="filter Animals cards">地图2 户外营地</button>
+      <button id="plan3" class="button btn1 background-color-map  " onclick="setMap(2)" title="filter Animals cards">地图3 银湖</button>
+      <button id="plan4" class="button btn1 background-color-map  " onclick="setMap(3)" title="filter Animals cards">地图4 商业港口</button>
+      <button id="plan5" class="button btn1 background-color-map  " onclick="setMap(4)" title="filter Animals cards">地图5 主题餐厅</button>
 
-      <button id="plan6" class="button btn1 background-color-map  " onclick="selectMap(id)" title="filter Animals cards">地图6 研究院</button>
-      <button id="plan7" class="button btn1 background-color-map  " onclick="selectMap(id)" title="filter Animals cards">地图7 冰淇淋店</button>
-      <button id="plan8" class="button btn1 background-color-map  " onclick="selectMap(id)" title="filter Animals cards">地图8 好莱坞山</button>
-      <button id="plan9" class="button btn1 background-color-map  " onclick="selectMap(id)" title="filter Animals cards">地图9</button>
-      <button id="plan10" class="button btn1 background-color-map  " onclick="selectMap(id)" title="filter Animals cards">地图10</button>
+      <button id="plan6" class="button btn1 background-color-map  " onclick="setMap(5)" title="filter Animals cards">地图6 研究院</button>
+      <button id="plan7" class="button btn1 background-color-map  " onclick="setMap(6)" title="filter Animals cards">地图7 冰淇淋店</button>
+      <button id="plan8" class="button btn1 background-color-map  " onclick="setMap(7)" title="filter Animals cards">地图8 好莱坞山</button>
+      <button id="plan9" class="button btn1 background-color-map  " onclick="setMap(8)" title="filter Animals cards">地图9</button>
+      <button id="plan10" class="button btn1 background-color-map  " onclick="setMap(9)" title="filter Animals cards">地图10</button>
 
-      <button id="plan0" class="button btn1 background-color-beginner-map  " onclick="selectMap(id)" title="filter Animals cards">地图0 新手图</button>
-      <button id="planA" class="button btn1 background-color-beginner-map  " onclick="selectMap(id)" title="filter Animals cards">地图A 新手图</button>
-    </div>
-
-
-    <div id="contentFilters">
-      <form id="sortButtons">
-        <fieldset style="margin-bottom: -30px;">
-          <legend class="sort-title">SORT PROJECT CARDS BY</legend>
-          <input type="radio" name='radio' id="radio-choice-1" value="on" checked="checked" onclick="sortByID();"style="display:none;">
-          <label class= "btn-sort" for="radio-choice-1">ID</label>
-          <input type="radio" name='radio' id="radio-choice-2" value="off" onclick="sortByPriceUp();" style="display:none;">
-          <label class= "btn-sort" for="radio-choice-2" >MC UP</label>
-          <input type="radio" name='radio' id="radio-choice-3" value="other" onclick="sortByPriceDown();" style="display:none;">
-          <label class= "btn-sort" for="radio-choice-3">MC Down</label>
-        </fieldset>
-      </form>
-
-      <button title="decrease Price filter by 1" class="button2   btn-price" onclick="reduceOne()" title="decrease Price filter by 1">-</button>
-      <input  type="number" title="filter by Price" id="price" oninput="selectMap(id);" value="0" min="0" max="50"></input>
-      <button class="button2   btn-price" style="margin-right:10px;" onclick="increaseOne()" title="increase Price filter by 1">+</button>
-
-      <button id=".production.money" class="button btn-production" onclick="selectMap(id)" title="filter cards with money production" style="margin-left:6px;"><div class="production money">M</div></button>
-      <button id=".production.steel" class="button btn-production" onclick="selectMap(id)" title="filter cards with steel production"><div class="production steel"></div></button>
-      <button id=".production.titanium" class="button btn-production" onclick="selectMap(id)" title="filter cards with titanium production"><div class="production titanium"></div></button>
-      <button id=".production.plant" class="button btn-production" onclick="selectMap(id)" title="filter cards with plant production"><div class="production plant"></div></button>
-      <button id=".production.energy" class="button btn-production" onclick="selectMap(id)" title="filter cards with enery production"><div class="production energy"></div></button>
-      <button id=".production.heat" class="button btn-production" onclick="selectMap(id)" title="filter cards with heat production"><div class="production heat"></div></button>
-      <br>
-
-      <button id="reqs" class="button btn-req" onclick="selectMap(id);toggleRequirementsFilters();" title="filter cards having Requirements">REQUIREMENTS</button>
-      <button id="vp" class="button btn-vp points" onclick="selectMap(id)" title="filter cards with VP">VP</button>
-
-      <button id="rating" class="button btn-tile rating" onclick="selectMap(id)" title="filter cards which increase TR" style="    background-size: 36px 30px !important;background-position: 10px;"></button>
-      <button id="temperature-tile" class="button btn-tile temperature-tile" onclick="selectMap(id)" title="filter cards which increase Temperature" style="background-size: 11px 34px !important;background-position: 22px;"></button>
-      <button id="ocean-tile" class="button btn-tile ocean-tile" onclick="selectMap(id)" title="filter cards which place Ocean tiles" style="background-position: 10px;"></button>
-      <button id="greenery-tile" class="button btn-tile greenery-tile" onclick="selectMap(id)" title="filter cards which place Greenery tiles" style="background-position: 10px;background-size: 40px 34px !important;"></button>
-      <button id="oxygen-tile" class="button btn-tile oxygen-tile" onclick="selectMap(id)" title="filter cards which increase Oxygen" style="background-position: 10px 3px;"></button>
-      <button id="venus-tile" class="button btn-tile venus-tile" onclick="selectMap(id)" title="filter cards which increase Venus" style="background-size: 45px 30px !important;
-      background-position: 5px 4px;
-  "></button>
-
-
-      <div id ="subfilterReqs" class="subfilterReqs-disabled">
-        <output id="output1" for="slider1" class="output-label" style="color:#f25540; margin-left: 225px;">-30</output> <!-- Just to display selected value -->
-        <input id="slider1" type="range" min="-30" max="8" value="-30" step="2" list="tickmarks" oninput="output1.value = slider1.value; selectMap(id);" class="track-temp-background track-temp-thumb" style="width:200px;margin-right:70px;margin-left:15px;">
-
-        <output id="output3" for="slider3" class="output-label" style="margin-left: 110px;">0</output> <!-- Just to display selected value -->
-        <input id="slider3" type="range" min="0" max="9" value="-0" step="1" list="tickmarks" oninput="output3.value = slider3.value; selectMap(id);" class=" track-oceans-thumb" style="width:100px;">
-
-        <output id="output2" for="slider2" class="output-label" style="color:rgb(246,241,175);">0</output> <!-- Just to display selected value -->
-        <input id="slider2" type="range" min="0" max="14" value="0" step="1" list="tickmarks" oninput="output2.value = slider2.value; selectMap(id);" class="track-oxygen-background track-oxygen-thumb">
-
-        <output id="output4" for="slider4" class="output-label" style="color: #8bb8da">0</output> <!-- Just to display selected value -->
-        <input id="slider4" type="range" min="0" max="30" value="0" step="2" list="tickmarks" oninput="output4.value = slider4.value; selectMap(id);" class="track-venus-background track-venus-thumb" style="margin-right:0px;">
-        <br>
-        <p></p>
-        <output id="output5" for="slider5" class="output-label" style="color: white;margin-left:198px;">0</output> <!-- Just to display selected value -->
-        <input style="margin-left:60px" id="slider5" type="range" min="0" max="7" value="0" step="1" list="tickmarks" oninput="output5.value = slider5.value; selectMap(id);" class="track-science-background track-science-thumb thumb-tab">
-
-        <output id="output8" for="slider8" class="output-label" style="margin-left: 90px;color: rgb(15,96,151);">0</output> <!-- Just to display selected value -->
-        <input id="slider8" type="range" min="0" max="3" value="0" step="1" list="tickmarks" oninput="output8.value = slider8.value; selectMap(id);" class="track-earth-background track-earth-thumb thumb-tab" style="width:80px;">
-
-        <output id="output6" for="slider6" class="output-label" style="margin-left: 70px;color:rgb(255,223,149)">0</output> <!-- Just to display selected value -->
-        <input id="slider6" type="range" min="0" max="2" value="0" step="1" list="tickmarks" oninput="output6.value = slider6.value; selectMap(id);" class="track-jovian-background track-jovian-thumb thumb-tab" style="width:60px;">
-
-        <output id="output7" for="slider7" class="output-label" style="margin-left: 70px; color:rgb(84,150,201)">0</output> <!-- Just to display selected value -->
-        <input id="slider7" type="range" min="0" max="2" value="0" step="1" list="tickmarks" oninput="output7.value = slider7.value; selectMap(id);" class="track-venusTag-background track-venusTag-thumb thumb-tab" style="width:60px;">
-      </div>
+      <button id="plan0" class="button btn1 background-color-beginner-map  " onclick="setMap(10)" title="filter Animals cards">地图0 新手图</button>
+      <button id="planA" class="button btn1 background-color-beginner-map  " onclick="setMap(11)" title="filter Animals cards">地图A 新手图</button>
     </div>
   </div>
 
-
   </div>
+        <div>
+      <img class = "map-board" id = "map-board" src = "../images-ark/compress/plan1.jpg" title = ""          style="
+  width: 760px;
+  height: 392px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 20px;
+    box-shadow: 0 0 7px 1px black;">
+            <span id = "map-title" style="font-size: 40px;margin-left: 10px;margin-top: 20px;"></span>
+            <br>
+            <span id = "map-text" style="font-size: 20px;margin-left: 10px;margin-top: 20px;"></span>
+            </div>
 
-
+      <script>setMap(0);</script>
   <!--ANIMALS-->
   <ul class="myUL" style="clear:both;">
 
@@ -176,15 +134,13 @@
         class="map8 filterDiv-map plan8">
 
       </li>
-    <li onclick="getClickedCard();"
-        class="map9 filterDiv-map plan9">
 
-    </li>
+
     <li onclick="getClickedCard();"
         class="map10 filterDiv-map plan10">
 
     </li>
-      <li onclick="getClickedCard(); name="111"
+      <li onclick="getClickedCard();" name="111"
         class="map0 filterDiv-map plan0">
       </li>
       <li onclick="getClickedCard();"
@@ -194,7 +150,6 @@
 
   </ul>
 
-  <button id="button-load-more" class="button button2 btn-load-more" onClick="displayCards()">加载更多</button>
 
   </div>
 </div>
