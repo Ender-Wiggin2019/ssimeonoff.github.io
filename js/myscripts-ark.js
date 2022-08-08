@@ -114,7 +114,7 @@ function displayMaps() {
     w3AddClass(arr[i], "display");
     w3RemoveClass(arr[i], "show");
   }
-  
+
 }
 //////////////////////PARSE function ////////////////////////////////
 function parseURLParams(url) {
@@ -705,7 +705,7 @@ function selectCard (clickedCard) {
 
     //showing or removing the CTA button and updating its url
     if (selectedCards.length > 0) {
-      document.getElementById("btn-selectedCards").href = "http://arknova.ender.lol/ark-nova" + selectedCards;
+      document.getElementById("btn-selectedCards").href = "http://arknova.ender.lol/arknova-cards-list/" + selectedCards;
       document.getElementById("selectedCardsAmount").innerHTML = selectedCardsAmount;
       document.getElementById("btn-selectedCards").classList.remove("disabled");
       document.getElementById("btn-selectedCards").disabled = false;
